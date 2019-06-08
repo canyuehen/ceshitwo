@@ -7,13 +7,22 @@
 </head>
 <body>
 
-	<div id="zz1">{{zz2}}</div>
+	<div id="zy">
+		
+	</div>
 
 	<script>
-		new Vue({
-			el:"#zz1",
+		var vu=new Vue({
+			el:"#zy",
+			template:"<p style='color:red;font-size:18px;' @click='zzzz' >{{zz1}}</p>",
 			data:{
-				zz2:"第一个"
+				zz1:"第一个",
+				zz2:"第二个"
+			},
+			methods:{
+				zzzz:function(){
+					this.zz1="改变了";
+				}
 			}
 		})
 	</script>
